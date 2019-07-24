@@ -1,0 +1,21 @@
+
+
+
+
+2018-07-28
+
+20180728 
+
+overcast - 0
+sunny - 1
+rainy- 2
+partially cloudy - 3 
+
+humidity 0.5
+
+dataset- [20180728, 2, 0.5] = 28
+
+
+
+
+

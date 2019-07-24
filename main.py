@@ -60,7 +60,7 @@ def train_data():
 
 
     X_train, X_test, y_train, y_test = train_test_split(X, y,
-                                                        test_size=0.2, 
+                                                        test_size=0.5, 
                                                         random_state=123, 
                                                         )
 
@@ -74,7 +74,7 @@ def train_data():
     hyperparameters = { 'randomforestregressor__max_features' : ['auto', 'sqrt', 'log2'],
                   'randomforestregressor__max_depth': [None, 5, 3, 1], }
 
-    clf = GridSearchCV(pipeline, hyperparameters, cv=10)
+    clf = LinearRegression()
     clf.fit(X_train, y_train)
     pred = clf.predict(X_test)
     print r2_score(y_test, pred)
@@ -144,7 +144,7 @@ def run_program(option):
         predict_weather()
 
 if __name__== "__main__":
-    # train_data()
+    train_data()
 
     while True:
         option = run_menu()
